@@ -1494,3 +1494,148 @@
 2025-02-02 00:29:44.548 | WARNING  | __main__:main:173 - Producer interrupted by user.
 2025-02-02 00:29:44.551 | INFO     | __main__:main:178 - Kafka producer closed.
 2025-02-02 00:29:44.553 | INFO     | __main__:main:180 - END producer.
+2025-02-02 00:31:43.077 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-02 00:31:43.081 | INFO     | __main__:<module>:66 - Project root: C:\Users\brand\Documents\masters_program\streaming_data\unit_4\buzzline-04-shellenberger
+2025-02-02 00:31:43.085 | INFO     | __main__:<module>:70 - Data folder: C:\Users\brand\Documents\masters_program\streaming_data\unit_4\buzzline-04-shellenberger\data
+2025-02-02 00:31:43.085 | INFO     | __main__:<module>:74 - Data file: C:\Users\brand\Documents\masters_program\streaming_data\unit_4\buzzline-04-shellenberger\data\smoker_temps.csv
+2025-02-02 00:31:43.087 | INFO     | __main__:main:133 - START producer.
+2025-02-02 00:31:43.087 | INFO     | utils.utils_producer:get_zookeeper_address:57 - Zookeeper address: localhost:2181
+2025-02-02 00:31:43.121 | INFO     | utils.utils_producer:check_zookeeper_service_is_ready:79 - Zookeeper is ready at localhost:2181.
+2025-02-02 00:31:43.125 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-02 00:31:43.482 | INFO     | utils.utils_producer:check_kafka_service_is_ready:98 - Kafka is ready. Brokers: {'throttle_time_ms': 0, 'brokers': [{'node_id': 1001, 'host': 'localhost', 'port': 9092, 'rack': None}], 'cluster_id': 'U0IGgWzwSbit4_lAWCopuw', 'controller_id': 1001}
+2025-02-02 00:31:43.484 | INFO     | __main__:get_kafka_topic:48 - Kafka topic: smoker_csv
+2025-02-02 00:31:43.486 | INFO     | __main__:get_message_interval:55 - Message interval: 5 seconds
+2025-02-02 00:31:43.487 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-02 00:31:43.487 | INFO     | utils.utils_producer:create_kafka_producer:146 - Connecting to Kafka broker at localhost:9092...
+2025-02-02 00:31:43.609 | INFO     | utils.utils_producer:create_kafka_producer:151 - Kafka producer successfully created.
+2025-02-02 00:31:43.611 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-02 00:31:43.993 | INFO     | utils.utils_producer:create_kafka_topic:176 - Creating 'smoker_csv'.
+2025-02-02 00:31:44.112 | INFO     | utils.utils_producer:create_kafka_topic:181 - Topic 'smoker_csv' created successfully.
+2025-02-02 00:31:44.113 | INFO     | __main__:main:156 - Kafka topic 'smoker_csv' is ready.
+2025-02-02 00:31:44.114 | INFO     | __main__:main:162 - Starting message production to topic 'smoker_csv'...
+2025-02-02 00:31:44.115 | INFO     | __main__:generate_messages:92 - Opening data file in read mode: C:\Users\brand\Documents\masters_program\streaming_data\unit_4\buzzline-04-shellenberger\data\smoker_temps.csv
+2025-02-02 00:31:44.136 | INFO     | __main__:generate_messages:94 - Reading data from file: C:\Users\brand\Documents\masters_program\streaming_data\unit_4\buzzline-04-shellenberger\data\smoker_temps.csv
+2025-02-02 00:31:44.146 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:31:44.137979', 'temperature': 70.4}
+2025-02-02 00:31:49.152 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:31:49.149244', 'temperature': 70.8}
+2025-02-02 00:31:54.163 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:31:54.158063', 'temperature': 71.2}
+2025-02-02 00:31:59.169 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:31:59.166906', 'temperature': 71.6}
+2025-02-02 00:32:04.184 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:32:04.173526', 'temperature': 72.0}
+2025-02-02 00:32:09.192 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:32:09.187997', 'temperature': 72.4}
+2025-02-02 00:32:14.211 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:32:14.200300', 'temperature': 72.8}
+2025-02-02 00:32:19.282 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:32:19.274974', 'temperature': 73.2}
+2025-02-02 00:32:24.320 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:32:24.312593', 'temperature': 73.6}
+2025-02-02 00:32:29.329 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:32:29.327785', 'temperature': 74.0}
+2025-02-02 00:32:34.336 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:32:34.331376', 'temperature': 74.4}
+2025-02-02 00:32:37.833 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-02 00:32:38.110 | INFO     | __main__:main:277 - START consumer.
+2025-02-02 00:32:38.110 | INFO     | __main__:get_kafka_topic:51 - Kafka topic: smoker_csv
+2025-02-02 00:32:38.111 | INFO     | __main__:get_kafka_consumer_group_id:58 - Kafka consumer group id: smoker_group
+2025-02-02 00:32:38.111 | INFO     | __main__:get_rolling_window_size:71 - Rolling window size: 10
+2025-02-02 00:32:38.111 | INFO     | __main__:main:287 - Consumer: Topic 'smoker_csv' and group 'smoker_group'...
+2025-02-02 00:32:38.112 | INFO     | __main__:main:288 - Rolling window size: 10
+2025-02-02 00:32:38.112 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-02 00:32:38.113 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='smoker_csv' and group ID='smoker_group'.
+2025-02-02 00:32:38.233 | INFO     | utils.utils_consumer:create_kafka_consumer:59 - Kafka consumer created successfully.
+2025-02-02 00:32:38.233 | INFO     | __main__:main:295 - Polling messages from topic 'smoker_csv'...
+2025-02-02 00:32:38.568 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:31:44.137979', 'temperature': 70.4}
+2025-02-02 00:32:38.797 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:31:49.149244', 'temperature': 70.8}
+2025-02-02 00:32:38.926 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:31:54.158063', 'temperature': 71.2}
+2025-02-02 00:32:39.042 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:31:59.166906', 'temperature': 71.6}
+2025-02-02 00:32:39.150 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:32:04.173526', 'temperature': 72.0}
+2025-02-02 00:32:39.267 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:32:09.187997', 'temperature': 72.4}
+2025-02-02 00:32:39.340 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:32:39.339439', 'temperature': 74.8}
+2025-02-02 00:32:39.396 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:32:14.200300', 'temperature': 72.8}
+2025-02-02 00:32:39.508 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:32:19.274974', 'temperature': 73.2}
+2025-02-02 00:32:39.639 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:32:24.312593', 'temperature': 73.6}
+2025-02-02 00:32:39.753 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:32:29.327785', 'temperature': 74.0}
+2025-02-02 00:32:39.867 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:32:34.331376', 'temperature': 74.4}
+2025-02-02 00:32:39.999 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:32:39.339439', 'temperature': 74.8}
+2025-02-02 00:32:44.344 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:32:44.342871', 'temperature': 75.2}
+2025-02-02 00:32:44.353 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:32:44.342871', 'temperature': 75.2}
+2025-02-02 00:32:49.369 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:32:49.361645', 'temperature': 75.6}
+2025-02-02 00:32:49.363 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:32:49.361645', 'temperature': 75.6}
+2025-02-02 00:32:54.403 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:32:54.401273', 'temperature': 76.0}
+2025-02-02 00:32:54.410 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:32:54.401273', 'temperature': 76.0}
+2025-02-02 00:32:59.409 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:32:59.405938', 'temperature': 76.4}
+2025-02-02 00:32:59.418 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:32:59.405938', 'temperature': 76.4}
+2025-02-02 00:33:04.417 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:33:04.414968', 'temperature': 76.8}
+2025-02-02 00:33:04.424 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:33:04.414968', 'temperature': 76.8}
+2025-02-02 00:33:09.419 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:33:09.418975', 'temperature': 77.2}
+2025-02-02 00:33:09.425 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:33:09.418975', 'temperature': 77.2}
+2025-02-02 00:33:14.423 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:33:14.421614', 'temperature': 77.6}
+2025-02-02 00:33:14.432 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:33:14.421614', 'temperature': 77.6}
+2025-02-02 00:33:19.430 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:33:19.427663', 'temperature': 78.0}
+2025-02-02 00:33:19.439 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:33:19.427663', 'temperature': 78.0}
+2025-02-02 00:33:24.436 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:33:24.433200', 'temperature': 78.4}
+2025-02-02 00:33:24.446 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:33:24.433200', 'temperature': 78.4}
+2025-02-02 00:33:29.441 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:33:29.440071', 'temperature': 78.8}
+2025-02-02 00:33:29.450 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:33:29.440071', 'temperature': 78.8}
+2025-02-02 00:33:34.461 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:33:34.451700', 'temperature': 79.2}
+2025-02-02 00:33:34.455 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:33:34.451700', 'temperature': 79.2}
+2025-02-02 00:33:39.509 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:33:39.504984', 'temperature': 79.6}
+2025-02-02 00:33:39.530 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:33:39.504984', 'temperature': 79.6}
+2025-02-02 00:33:44.518 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:33:44.517108', 'temperature': 80.0}
+2025-02-02 00:33:44.526 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:33:44.517108', 'temperature': 80.0}
+2025-02-02 00:33:49.523 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:33:49.520034', 'temperature': 80.4}
+2025-02-02 00:33:49.539 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:33:49.520034', 'temperature': 80.4}
+2025-02-02 00:33:54.538 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:33:54.535018', 'temperature': 80.8}
+2025-02-02 00:33:54.550 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:33:54.535018', 'temperature': 80.8}
+2025-02-02 00:33:59.546 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:33:59.542882', 'temperature': 81.2}
+2025-02-02 00:33:59.558 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:33:59.542882', 'temperature': 81.2}
+2025-02-02 00:34:04.558 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:34:04.555316', 'temperature': 81.6}
+2025-02-02 00:34:04.571 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:34:04.555316', 'temperature': 81.6}
+2025-02-02 00:34:09.569 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:34:09.565655', 'temperature': 82.0}
+2025-02-02 00:34:09.585 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:34:09.565655', 'temperature': 82.0}
+2025-02-02 00:34:14.576 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:34:14.573173', 'temperature': 82.4}
+2025-02-02 00:34:14.584 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:34:14.573173', 'temperature': 82.4}
+2025-02-02 00:34:19.585 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:34:19.583003', 'temperature': 82.8}
+2025-02-02 00:34:19.593 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:34:19.583003', 'temperature': 82.8}
+2025-02-02 00:34:24.589 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:34:24.588799', 'temperature': 83.2}
+2025-02-02 00:34:24.593 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:34:24.588799', 'temperature': 83.2}
+2025-02-02 00:34:29.611 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:34:29.590786', 'temperature': 83.6}
+2025-02-02 00:34:29.606 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:34:29.590786', 'temperature': 83.6}
+2025-02-02 00:34:34.631 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:34:34.622480', 'temperature': 84.0}
+2025-02-02 00:34:34.637 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:34:34.622480', 'temperature': 84.0}
+2025-02-02 00:34:39.641 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:34:39.637007', 'temperature': 84.4}
+2025-02-02 00:34:39.648 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:34:39.637007', 'temperature': 84.4}
+2025-02-02 00:34:44.645 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:34:44.643546', 'temperature': 84.8}
+2025-02-02 00:34:44.650 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:34:44.643546', 'temperature': 84.8}
+2025-02-02 00:34:49.649 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:34:49.647528', 'temperature': 85.2}
+2025-02-02 00:34:49.654 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:34:49.647528', 'temperature': 85.2}
+2025-02-02 00:34:54.663 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:34:54.653582', 'temperature': 85.6}
+2025-02-02 00:34:54.655 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:34:54.653582', 'temperature': 85.6}
+2025-02-02 00:34:59.674 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:34:59.671783', 'temperature': 86.0}
+2025-02-02 00:34:59.679 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:34:59.671783', 'temperature': 86.0}
+2025-02-02 00:35:04.678 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:35:04.676557', 'temperature': 86.4}
+2025-02-02 00:35:04.683 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:35:04.676557', 'temperature': 86.4}
+2025-02-02 00:35:09.689 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:35:09.683755', 'temperature': 86.8}
+2025-02-02 00:35:09.685 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:35:09.683755', 'temperature': 86.8}
+2025-02-02 00:35:14.698 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:35:14.693132', 'temperature': 87.2}
+2025-02-02 00:35:14.694 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:35:14.693132', 'temperature': 87.2}
+2025-02-02 00:35:19.707 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:35:19.700822', 'temperature': 87.6}
+2025-02-02 00:35:19.701 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:35:19.700822', 'temperature': 87.6}
+2025-02-02 00:35:24.712 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:35:24.708967', 'temperature': 88.0}
+2025-02-02 00:35:24.718 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:35:24.708967', 'temperature': 88.0}
+2025-02-02 00:35:29.715 | INFO     | __main__:main:166 - Sent message to topic 'smoker_csv': {'timestamp': '2025-02-02T06:35:29.714917', 'temperature': 88.4}
+2025-02-02 00:35:29.721 | INFO     | __main__:process_message:235 - Processed JSON message: {'timestamp': '2025-02-02T06:35:29.714917', 'temperature': 88.4}
+2025-02-02 00:35:30.510 | WARNING  | __main__:main:302 - Consumer interrupted by user.
+2025-02-02 00:35:30.519 | INFO     | __main__:main:307 - Kafka consumer for topic 'smoker_csv' closed.
+2025-02-02 00:35:32.788 | WARNING  | __main__:main:169 - Producer interrupted by user.
+2025-02-02 00:35:32.791 | INFO     | __main__:main:174 - Kafka producer closed.
+2025-02-02 00:35:32.796 | INFO     | __main__:main:176 - END producer.
+2025-02-02 19:58:35.056 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-02 19:58:35.099 | INFO     | __main__:main:138 - START producer...
+2025-02-02 19:58:35.252 | INFO     | __main__:main:151 - Kafka producer connected to localhost:9092
+2025-02-02 19:58:35.261 | INFO     | __main__:main:158 - {'message': 'I just saw game! It was funny.', 'author': 'Eve', 'timestamp': '2025-02-02 19:58:35', 'category': 'gaming', 'sentiment': 0.05, 'keyword_mentioned': 'game', 'message_length': 30}
+2025-02-02 19:58:35.806 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just saw game! It was funny.', 'author': 'Eve', 'timestamp': '2025-02-02 19:58:35', 'category': 'gaming', 'sentiment': 0.05, 'keyword_mentioned': 'game', 'message_length': 30}
+2025-02-02 19:58:40.826 | INFO     | __main__:main:158 - {'message': 'I just shared recipe! It was exciting.', 'author': 'Bob', 'timestamp': '2025-02-02 19:58:40', 'category': 'food', 'sentiment': 0.55, 'keyword_mentioned': 'recipe', 'message_length': 38}
+2025-02-02 19:58:40.830 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared recipe! It was exciting.', 'author': 'Bob', 'timestamp': '2025-02-02 19:58:40', 'category': 'food', 'sentiment': 0.55, 'keyword_mentioned': 'recipe', 'message_length': 38}
+2025-02-02 19:58:45.836 | INFO     | __main__:main:158 - {'message': 'I just tried a meme! It was amazing.', 'author': 'Bob', 'timestamp': '2025-02-02 19:58:45', 'category': 'humor', 'sentiment': 0.95, 'keyword_mentioned': 'meme', 'message_length': 36}
+2025-02-02 19:58:45.839 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just tried a meme! It was amazing.', 'author': 'Bob', 'timestamp': '2025-02-02 19:58:45', 'category': 'humor', 'sentiment': 0.95, 'keyword_mentioned': 'meme', 'message_length': 36}
+2025-02-02 19:58:50.842 | INFO     | __main__:main:158 - {'message': 'I just saw a story! It was exciting.', 'author': 'Bob', 'timestamp': '2025-02-02 19:58:50', 'category': 'other', 'sentiment': 0.26, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-02-02 19:58:50.856 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just saw a story! It was exciting.', 'author': 'Bob', 'timestamp': '2025-02-02 19:58:50', 'category': 'other', 'sentiment': 0.26, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-02-02 19:58:55.886 | INFO     | __main__:main:158 - {'message': 'I just loved Python! It was funny.', 'author': 'Alice', 'timestamp': '2025-02-02 19:58:55', 'category': 'tech', 'sentiment': 0.49, 'keyword_mentioned': 'Python', 'message_length': 34}
+2025-02-02 19:58:55.890 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just loved Python! It was funny.', 'author': 'Alice', 'timestamp': '2025-02-02 19:58:55', 'category': 'tech', 'sentiment': 0.49, 'keyword_mentioned': 'Python', 'message_length': 34}
+2025-02-02 19:58:57.896 | WARNING  | __main__:main:171 - Producer interrupted by user.
+2025-02-02 19:58:57.902 | INFO     | __main__:main:177 - Kafka producer closed.
+2025-02-02 19:58:57.903 | INFO     | __main__:main:178 - Producer shutting down.

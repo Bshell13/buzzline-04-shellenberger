@@ -1,0 +1,5 @@
+{"message": "I just saw game! It was funny.", "author": "Eve", "timestamp": "2025-02-02 19:58:35", "category": "gaming", "sentiment": 0.05, "keyword_mentioned": "game", "message_length": 30}
+{"message": "I just shared recipe! It was exciting.", "author": "Bob", "timestamp": "2025-02-02 19:58:40", "category": "food", "sentiment": 0.55, "keyword_mentioned": "recipe", "message_length": 38}
+{"message": "I just tried a meme! It was amazing.", "author": "Bob", "timestamp": "2025-02-02 19:58:45", "category": "humor", "sentiment": 0.95, "keyword_mentioned": "meme", "message_length": 36}
+{"message": "I just saw a story! It was exciting.", "author": "Bob", "timestamp": "2025-02-02 19:58:50", "category": "other", "sentiment": 0.26, "keyword_mentioned": "other", "message_length": 36}
+{"message": "I just loved Python! It was funny.", "author": "Alice", "timestamp": "2025-02-02 19:58:55", "category": "tech", "sentiment": 0.49, "keyword_mentioned": "Python", "message_length": 34}
