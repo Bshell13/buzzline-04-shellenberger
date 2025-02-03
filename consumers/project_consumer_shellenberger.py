@@ -70,8 +70,11 @@ def get_kafka_consumer_group_id() -> str:
 # Set up data structures
 #####################################
 
-# Initialize a dictionary to store author counts
-custom_dict = defaultdict(int)
+# Initialize a dictionary to store the related fields
+custom_dict = {
+    'sentiment': [],
+    'message_length': []
+}
 
 #####################################
 # Set up live visuals
@@ -99,23 +102,24 @@ def update_chart():
     ax.clear()
 
     # Get the authors and counts from the dictionary
-    authors_list = list(avg_sentiment.keys())
-    counts_list = list(avg_sentiment.values())
+    sentiment = list(custom_dict['sentiment'].keys())
+    message_length = list(custom_dict['message_length'].keys())
 
     # Create a bar chart using the bar() method.
     # Pass in the x list, the y list, and the color
-    ax.bar(authors_list, counts_list, color="skyblue")
+    ax.scatter(message_length, sentiment)
 
     # Use the built-in axes methods to set the labels and title
-    ax.set_xlabel("Authors")
-    ax.set_ylabel("Message Counts")
-    ax.set_title("Real-Time Author Message Counts by Brandon Shellenberger")
+    ax.set_xlabel("Length of Message (# of characters)")
+    ax.set_ylabel("Sentiment Score")
+    ax.set_title("Real-Time Length of Message vs. Sentiment by Category")
+    plt.suptitle('Brandon Shellenberger')
 
     # Use the set_xticklabels() method to rotate the x-axis labels
     # Pass in the x list, specify the rotation angle is 45 degrees,
     # and align them to the right
     # ha stands for horizontal alignment
-    ax.set_xticklabels(authors_list, rotation=45, ha="right")
+    
 
     # Use the tight_layout() method to automatically adjust the padding
     plt.tight_layout()
@@ -158,9 +162,11 @@ def process_message(message: str) -> None:
             logger.info(f"Message received from author: {category, sentiment, message_length}")
             
             # update 'custom_dict' with extracted fields.
+            custom_dict['sentiment'].append(sentiment)
+            custom_dict['message_length'].append(message_length)
 
             # Log the updated counts
-            logger.info(f"Updated author counts: {dict(author_counts)}")
+            logger.info(f"Updated author counts: {dict(custom_dict)}")
 
             # Update the chart
             update_chart()
