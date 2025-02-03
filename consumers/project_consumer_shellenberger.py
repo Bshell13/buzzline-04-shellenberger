@@ -1,15 +1,20 @@
 """
-json_consumer_case.py
+project_consumer_shellenberger.py
 
-Consume json messages from a Kafka topic and visualize author counts in real-time.
+Consume json messages from a Kafka topic.
 
 JSON is a set of key:value pairs. 
 
-Example serialized Kafka message
-"{\"message\": \"I love Python!\", \"author\": \"Eve\"}"
-
-Example JSON message (after deserialization) to be analyzed
-{"message": "I love Python!", "author": "Eve"}
+Example JSON message
+{
+    "message": "I just shared a meme! It was amazing.",
+    "author": "Charlie",
+    "timestamp": "2025-01-29 14:35:20",
+    "category": "humor",
+    "sentiment": 0.87,
+    "keyword_mentioned": "meme",
+    "message_length": 42
+}
 
 """
 
@@ -30,6 +35,7 @@ from dotenv import load_dotenv
 # Use the common alias 'plt' for Matplotlib.pyplot
 # Know pyplot well
 import matplotlib.pyplot as plt
+import numpy as np
 
 # Import functions from local modules
 from utils.utils_consumer import create_kafka_consumer
@@ -48,14 +54,14 @@ load_dotenv()
 
 def get_kafka_topic() -> str:
     """Fetch Kafka topic from environment or use default."""
-    topic = os.getenv("BUZZ_TOPIC", "unknown_topic")
+    topic = os.getenv("PROJECT_TOPIC", "unknown_topic")
     logger.info(f"Kafka topic: {topic}")
     return topic
 
 
 def get_kafka_consumer_group_id() -> str:
     """Fetch Kafka consumer group id from environment or use default."""
-    group_id: str = os.getenv("BUZZ_CONSUMER_GROUP_ID", "default_group")
+    group_id: str = os.getenv("PROJECT_CONSUMER_GROUP_ID", "default_group")
     logger.info(f"Kafka consumer group id: {group_id}")
     return group_id
 
@@ -65,7 +71,7 @@ def get_kafka_consumer_group_id() -> str:
 #####################################
 
 # Initialize a dictionary to store author counts
-author_counts = defaultdict(int)
+custom_dict = defaultdict(int)
 
 #####################################
 # Set up live visuals
@@ -93,8 +99,8 @@ def update_chart():
     ax.clear()
 
     # Get the authors and counts from the dictionary
-    authors_list = list(author_counts.keys())
-    counts_list = list(author_counts.values())
+    authors_list = list(avg_sentiment.keys())
+    counts_list = list(avg_sentiment.values())
 
     # Create a bar chart using the bar() method.
     # Pass in the x list, the y list, and the color
@@ -145,12 +151,13 @@ def process_message(message: str) -> None:
 
         # Ensure it's a dictionary before accessing fields
         if isinstance(message_dict, dict):
-            # Extract the 'author' field from the Python dictionary
-            author = message_dict.get("author", "unknown")
-            logger.info(f"Message received from author: {author}")
-
-            # Increment the count for the author
-            author_counts[author] += 1
+            # Extract the 'category', 'sentiment', and 'message_length' field from the Python dictionary
+            category = message_dict.get("category", "unknown")
+            sentiment = message_dict.get('sentiment', 'unknown')
+            message_length = message_dict.get('message_length', 'unknown')
+            logger.info(f"Message received from author: {category, sentiment, message_length}")
+            
+            # update 'custom_dict' with extracted fields.
 
             # Log the updated counts
             logger.info(f"Updated author counts: {dict(author_counts)}")
