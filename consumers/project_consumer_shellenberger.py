@@ -99,15 +99,12 @@ def update_chart():
     # Clear the previous chart
     ax.clear()
 
-    # Calculates the average sentiment by category and author
-    avg_sentiment = custom_df.groupby(['Category', 'Author']).mean()
-    
-    # Rests the index
-    avg_sentiment = avg_sentiment.reset_index()
+    # Calculates the average sentiment by category and author and restes index
+    avg_sentiment = custom_df.groupby(['Category', 'Author'])['Sentiment'].mean().reset_index()
     
     # Create a barplot using the barplot() method from seaborn.
     # Pass in the data, x list, the y list, and the hue.
-    sns.barplot(data=custom_df,x=['Category'], y=['Sentiment'], hue=['Author'], errorbar=None)
+    sns.barplot(data=avg_sentiment,x='Category', y='Sentiment', hue='Author', errorbar=None)
     
     # Use the built-in axes methods to set the labels and title
     ax.set_xlabel("Category")

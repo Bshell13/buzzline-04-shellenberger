@@ -3768,3 +3768,121 @@ Name: Message Length, dtype: int64}
 2025-02-03 22:14:35.844 | WARNING  | __main__:main:171 - Producer interrupted by user.
 2025-02-03 22:14:35.848 | INFO     | __main__:main:177 - Kafka producer closed.
 2025-02-03 22:14:35.848 | INFO     | __main__:main:178 - Producer shutting down.
+2025-02-03 22:39:13.521 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-03 22:39:13.527 | INFO     | __main__:main:138 - START producer...
+2025-02-03 22:39:13.678 | INFO     | __main__:main:151 - Kafka producer connected to localhost:9092
+2025-02-03 22:39:13.681 | INFO     | __main__:main:158 - {'message': 'I just saw Python! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-03 22:39:13', 'category': 'tech', 'sentiment': 0.54, 'keyword_mentioned': 'Python', 'message_length': 34}
+2025-02-03 22:39:13.684 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just saw Python! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-03 22:39:13', 'category': 'tech', 'sentiment': 0.54, 'keyword_mentioned': 'Python', 'message_length': 34}
+2025-02-03 22:39:18.687 | INFO     | __main__:main:158 - {'message': 'I just tried a meme! It was boring.', 'author': 'Bob', 'timestamp': '2025-02-03 22:39:18', 'category': 'humor', 'sentiment': 0.51, 'keyword_mentioned': 'meme', 'message_length': 35}
+2025-02-03 22:39:18.690 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just tried a meme! It was boring.', 'author': 'Bob', 'timestamp': '2025-02-03 22:39:18', 'category': 'humor', 'sentiment': 0.51, 'keyword_mentioned': 'meme', 'message_length': 35}
+2025-02-03 22:39:23.692 | INFO     | __main__:main:158 - {'message': 'I just loved JavaScript! It was weird.', 'author': 'Alice', 'timestamp': '2025-02-03 22:39:23', 'category': 'tech', 'sentiment': 0.43, 'keyword_mentioned': 'JavaScript', 'message_length': 38}
+2025-02-03 22:39:23.696 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just loved JavaScript! It was weird.', 'author': 'Alice', 'timestamp': '2025-02-03 22:39:23', 'category': 'tech', 'sentiment': 0.43, 'keyword_mentioned': 'JavaScript', 'message_length': 38}
+2025-02-03 22:39:28.697 | INFO     | __main__:main:158 - {'message': 'I just loved travel! It was exciting.', 'author': 'Alice', 'timestamp': '2025-02-03 22:39:28', 'category': 'travel', 'sentiment': 0.59, 'keyword_mentioned': 'travel', 'message_length': 37}
+2025-02-03 22:39:28.699 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just loved travel! It was exciting.', 'author': 'Alice', 'timestamp': '2025-02-03 22:39:28', 'category': 'travel', 'sentiment': 0.59, 'keyword_mentioned': 'travel', 'message_length': 37}
+2025-02-03 22:39:33.701 | INFO     | __main__:main:158 - {'message': 'I just shared an app! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-03 22:39:33', 'category': 'other', 'sentiment': 0.6, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-03 22:39:33.703 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared an app! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-03 22:39:33', 'category': 'other', 'sentiment': 0.6, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-03 22:39:38.374 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-03 22:39:38.705 | INFO     | __main__:main:158 - {'message': 'I just shared a trick! It was exciting.', 'author': 'Bob', 'timestamp': '2025-02-03 22:39:38', 'category': 'other', 'sentiment': 0.97, 'keyword_mentioned': 'other', 'message_length': 39}
+2025-02-03 22:39:38.709 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared a trick! It was exciting.', 'author': 'Bob', 'timestamp': '2025-02-03 22:39:38', 'category': 'other', 'sentiment': 0.97, 'keyword_mentioned': 'other', 'message_length': 39}
+2025-02-03 22:39:41.325 | INFO     | __main__:main:196 - START consumer.
+2025-02-03 22:39:41.325 | INFO     | __main__:get_kafka_topic:59 - Kafka topic: project_json
+2025-02-03 22:39:41.326 | INFO     | __main__:get_kafka_consumer_group_id:66 - Kafka consumer group id: project_group
+2025-02-03 22:39:41.326 | INFO     | __main__:main:201 - Consumer: Topic 'project_json' and group 'project_group'...
+2025-02-03 22:39:41.327 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-03 22:39:41.327 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='project_json' and group ID='project_group'.
+2025-02-03 22:39:41.476 | INFO     | utils.utils_consumer:create_kafka_consumer:59 - Kafka consumer created successfully.
+2025-02-03 22:39:41.476 | INFO     | __main__:main:207 - Polling messages from topic 'project_json'...
+2025-02-03 22:39:41.723 | INFO     | __main__:process_message:153 - Processed JSON message: {'message': 'I just shared travel! It was funny.', 'author': 'Eve', 'timestamp': '2025-02-03 22:14:30', 'category': 'travel', 'sentiment': 0.12, 'keyword_mentioned': 'travel', 'message_length': 35}
+2025-02-03 22:39:41.723 | INFO     | __main__:process_message:161 - Message received: ('travel', 0.12, 'Eve')
+2025-02-03 22:39:41.725 | INFO     | __main__:process_message:167 - Updated DataFrame
+2025-02-03 22:39:41.860 | INFO     | __main__:process_message:173 - Chart updated successfully for message: {"message": "I just shared travel! It was funny.", "author": "Eve", "timestamp": "2025-02-03 22:14:30", "category": "travel", "sentiment": 0.12, "keyword_mentioned": "travel", "message_length": 35}
+2025-02-03 22:39:41.863 | INFO     | __main__:process_message:153 - Processed JSON message: {'message': 'I just found Python! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-03 22:14:35', 'category': 'tech', 'sentiment': 0.55, 'keyword_mentioned': 'Python', 'message_length': 36}
+2025-02-03 22:39:41.863 | INFO     | __main__:process_message:161 - Message received: ('tech', 0.55, 'Eve')
+2025-02-03 22:39:41.864 | INFO     | __main__:process_message:167 - Updated DataFrame
+2025-02-03 22:39:41.876 | ERROR    | __main__:process_message:180 - Error processing message: Length of list vectors must match length of `data` when both are used, but `data` has length 2 and the vector passed to `x` has length 1.
+2025-02-03 22:39:41.880 | INFO     | __main__:process_message:153 - Processed JSON message: {'message': 'I just saw Python! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-03 22:39:13', 'category': 'tech', 'sentiment': 0.54, 'keyword_mentioned': 'Python', 'message_length': 34}
+2025-02-03 22:39:41.880 | INFO     | __main__:process_message:161 - Message received: ('tech', 0.54, 'Eve')
+2025-02-03 22:39:41.881 | INFO     | __main__:process_message:167 - Updated DataFrame
+2025-02-03 22:39:41.891 | ERROR    | __main__:process_message:180 - Error processing message: Length of list vectors must match length of `data` when both are used, but `data` has length 3 and the vector passed to `x` has length 1.
+2025-02-03 22:39:41.894 | INFO     | __main__:process_message:153 - Processed JSON message: {'message': 'I just tried a meme! It was boring.', 'author': 'Bob', 'timestamp': '2025-02-03 22:39:18', 'category': 'humor', 'sentiment': 0.51, 'keyword_mentioned': 'meme', 'message_length': 35}
+2025-02-03 22:39:41.894 | INFO     | __main__:process_message:161 - Message received: ('humor', 0.51, 'Bob')
+2025-02-03 22:39:41.896 | INFO     | __main__:process_message:167 - Updated DataFrame
+2025-02-03 22:39:41.908 | ERROR    | __main__:process_message:180 - Error processing message: Length of list vectors must match length of `data` when both are used, but `data` has length 4 and the vector passed to `x` has length 1.
+2025-02-03 22:39:41.911 | INFO     | __main__:process_message:153 - Processed JSON message: {'message': 'I just loved JavaScript! It was weird.', 'author': 'Alice', 'timestamp': '2025-02-03 22:39:23', 'category': 'tech', 'sentiment': 0.43, 'keyword_mentioned': 'JavaScript', 'message_length': 38}
+2025-02-03 22:39:41.912 | INFO     | __main__:process_message:161 - Message received: ('tech', 0.43, 'Alice')
+2025-02-03 22:39:41.913 | INFO     | __main__:process_message:167 - Updated DataFrame
+2025-02-03 22:39:41.922 | ERROR    | __main__:process_message:180 - Error processing message: Length of list vectors must match length of `data` when both are used, but `data` has length 5 and the vector passed to `x` has length 1.
+2025-02-03 22:39:41.929 | INFO     | __main__:process_message:153 - Processed JSON message: {'message': 'I just loved travel! It was exciting.', 'author': 'Alice', 'timestamp': '2025-02-03 22:39:28', 'category': 'travel', 'sentiment': 0.59, 'keyword_mentioned': 'travel', 'message_length': 37}
+2025-02-03 22:39:41.930 | INFO     | __main__:process_message:161 - Message received: ('travel', 0.59, 'Alice')
+2025-02-03 22:39:41.933 | INFO     | __main__:process_message:167 - Updated DataFrame
+2025-02-03 22:39:41.944 | ERROR    | __main__:process_message:180 - Error processing message: Length of list vectors must match length of `data` when both are used, but `data` has length 6 and the vector passed to `x` has length 1.
+2025-02-03 22:39:41.946 | INFO     | __main__:process_message:153 - Processed JSON message: {'message': 'I just shared an app! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-03 22:39:33', 'category': 'other', 'sentiment': 0.6, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-03 22:39:41.948 | INFO     | __main__:process_message:161 - Message received: ('other', 0.6, 'Bob')
+2025-02-03 22:39:41.950 | INFO     | __main__:process_message:167 - Updated DataFrame
+2025-02-03 22:39:41.966 | ERROR    | __main__:process_message:180 - Error processing message: Length of list vectors must match length of `data` when both are used, but `data` has length 7 and the vector passed to `x` has length 1.
+2025-02-03 22:39:41.969 | INFO     | __main__:process_message:153 - Processed JSON message: {'message': 'I just shared a trick! It was exciting.', 'author': 'Bob', 'timestamp': '2025-02-03 22:39:38', 'category': 'other', 'sentiment': 0.97, 'keyword_mentioned': 'other', 'message_length': 39}
+2025-02-03 22:39:41.969 | INFO     | __main__:process_message:161 - Message received: ('other', 0.97, 'Bob')
+2025-02-03 22:39:41.971 | INFO     | __main__:process_message:167 - Updated DataFrame
+2025-02-03 22:39:41.987 | ERROR    | __main__:process_message:180 - Error processing message: Length of list vectors must match length of `data` when both are used, but `data` has length 8 and the vector passed to `x` has length 1.
+2025-02-03 22:39:43.710 | INFO     | __main__:main:158 - {'message': 'I just tried a trick! It was weird.', 'author': 'Charlie', 'timestamp': '2025-02-03 22:39:43', 'category': 'other', 'sentiment': 0.83, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-03 22:39:43.715 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just tried a trick! It was weird.', 'author': 'Charlie', 'timestamp': '2025-02-03 22:39:43', 'category': 'other', 'sentiment': 0.83, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-03 22:39:43.725 | INFO     | __main__:process_message:153 - Processed JSON message: {'message': 'I just tried a trick! It was weird.', 'author': 'Charlie', 'timestamp': '2025-02-03 22:39:43', 'category': 'other', 'sentiment': 0.83, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-03 22:39:43.726 | INFO     | __main__:process_message:161 - Message received: ('other', 0.83, 'Charlie')
+2025-02-03 22:39:43.728 | INFO     | __main__:process_message:167 - Updated DataFrame
+2025-02-03 22:39:43.747 | ERROR    | __main__:process_message:180 - Error processing message: Length of list vectors must match length of `data` when both are used, but `data` has length 9 and the vector passed to `x` has length 1.
+2025-02-03 22:39:48.719 | INFO     | __main__:main:158 - {'message': 'I just shared a trick! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-03 22:39:48', 'category': 'other', 'sentiment': 0.63, 'keyword_mentioned': 'other', 'message_length': 38}
+2025-02-03 22:39:48.724 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared a trick! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-03 22:39:48', 'category': 'other', 'sentiment': 0.63, 'keyword_mentioned': 'other', 'message_length': 38}
+2025-02-03 22:39:48.735 | INFO     | __main__:process_message:153 - Processed JSON message: {'message': 'I just shared a trick! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-03 22:39:48', 'category': 'other', 'sentiment': 0.63, 'keyword_mentioned': 'other', 'message_length': 38}
+2025-02-03 22:39:48.736 | INFO     | __main__:process_message:161 - Message received: ('other', 0.63, 'Eve')
+2025-02-03 22:39:48.739 | INFO     | __main__:process_message:167 - Updated DataFrame
+2025-02-03 22:39:48.761 | ERROR    | __main__:process_message:180 - Error processing message: Length of list vectors must match length of `data` when both are used, but `data` has length 10 and the vector passed to `x` has length 1.
+2025-02-03 22:39:53.729 | INFO     | __main__:main:158 - {'message': 'I just tried a story! It was weird.', 'author': 'Charlie', 'timestamp': '2025-02-03 22:39:53', 'category': 'other', 'sentiment': 0.95, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-03 22:39:53.733 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just tried a story! It was weird.', 'author': 'Charlie', 'timestamp': '2025-02-03 22:39:53', 'category': 'other', 'sentiment': 0.95, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-03 22:39:53.740 | INFO     | __main__:process_message:153 - Processed JSON message: {'message': 'I just tried a story! It was weird.', 'author': 'Charlie', 'timestamp': '2025-02-03 22:39:53', 'category': 'other', 'sentiment': 0.95, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-03 22:39:53.742 | INFO     | __main__:process_message:161 - Message received: ('other', 0.95, 'Charlie')
+2025-02-03 22:39:53.744 | INFO     | __main__:process_message:167 - Updated DataFrame
+2025-02-03 22:39:53.771 | ERROR    | __main__:process_message:180 - Error processing message: Length of list vectors must match length of `data` when both are used, but `data` has length 11 and the vector passed to `x` has length 1.
+2025-02-03 22:39:54.311 | WARNING  | __main__:main:216 - Consumer interrupted by user.
+2025-02-03 22:39:54.324 | INFO     | __main__:main:221 - Kafka consumer for topic 'project_json' closed.
+2025-02-03 22:39:54.329 | INFO     | __main__:main:223 - END consumer for topic 'project_json' and group 'project_group'.
+2025-02-03 22:39:57.227 | WARNING  | __main__:main:171 - Producer interrupted by user.
+2025-02-03 22:39:57.234 | INFO     | __main__:main:177 - Kafka producer closed.
+2025-02-03 22:39:57.235 | INFO     | __main__:main:178 - Producer shutting down.
+2025-02-03 22:41:27.200 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-03 22:41:27.203 | INFO     | __main__:main:138 - START producer...
+2025-02-03 22:41:27.345 | INFO     | __main__:main:151 - Kafka producer connected to localhost:9092
+2025-02-03 22:41:27.346 | INFO     | __main__:main:158 - {'message': 'I just loved a story! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-03 22:41:27', 'category': 'other', 'sentiment': 0.24, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-02-03 22:41:27.353 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just loved a story! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-03 22:41:27', 'category': 'other', 'sentiment': 0.24, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-02-03 22:41:32.354 | INFO     | __main__:main:158 - {'message': 'I just found a movie! It was exciting.', 'author': 'Charlie', 'timestamp': '2025-02-03 22:41:32', 'category': 'entertainment', 'sentiment': 0.43, 'keyword_mentioned': 'movie', 'message_length': 38}
+2025-02-03 22:41:32.356 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just found a movie! It was exciting.', 'author': 'Charlie', 'timestamp': '2025-02-03 22:41:32', 'category': 'entertainment', 'sentiment': 0.43, 'keyword_mentioned': 'movie', 'message_length': 38}
+2025-02-03 22:41:34.487 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-03 22:41:34.751 | INFO     | __main__:main:196 - START consumer.
+2025-02-03 22:41:34.751 | INFO     | __main__:get_kafka_topic:59 - Kafka topic: project_json
+2025-02-03 22:41:34.752 | INFO     | __main__:get_kafka_consumer_group_id:66 - Kafka consumer group id: project_group
+2025-02-03 22:41:34.752 | INFO     | __main__:main:201 - Consumer: Topic 'project_json' and group 'project_group'...
+2025-02-03 22:41:34.753 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-03 22:41:34.753 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='project_json' and group ID='project_group'.
+2025-02-03 22:41:34.909 | INFO     | utils.utils_consumer:create_kafka_consumer:59 - Kafka consumer created successfully.
+2025-02-03 22:41:34.910 | INFO     | __main__:main:207 - Polling messages from topic 'project_json'...
+2025-02-03 22:41:35.248 | INFO     | __main__:process_message:153 - Processed JSON message: {'message': 'I just loved a story! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-03 22:41:27', 'category': 'other', 'sentiment': 0.24, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-02-03 22:41:35.249 | INFO     | __main__:process_message:161 - Message received: ('other', 0.24, 'Charlie')
+2025-02-03 22:41:35.251 | INFO     | __main__:process_message:167 - Updated DataFrame
+2025-02-03 22:41:35.405 | INFO     | __main__:process_message:173 - Chart updated successfully for message: {"message": "I just loved a story! It was boring.", "author": "Charlie", "timestamp": "2025-02-03 22:41:27", "category": "other", "sentiment": 0.24, "keyword_mentioned": "other", "message_length": 36}
+2025-02-03 22:41:35.408 | INFO     | __main__:process_message:153 - Processed JSON message: {'message': 'I just found a movie! It was exciting.', 'author': 'Charlie', 'timestamp': '2025-02-03 22:41:32', 'category': 'entertainment', 'sentiment': 0.43, 'keyword_mentioned': 'movie', 'message_length': 38}
+2025-02-03 22:41:35.408 | INFO     | __main__:process_message:161 - Message received: ('entertainment', 0.43, 'Charlie')
+2025-02-03 22:41:35.411 | INFO     | __main__:process_message:167 - Updated DataFrame
+2025-02-03 22:41:35.423 | ERROR    | __main__:process_message:180 - Error processing message: Length of list vectors must match length of `data` when both are used, but `data` has length 2 and the vector passed to `x` has length 1.
+2025-02-03 22:41:37.357 | INFO     | __main__:main:158 - {'message': 'I just loved a movie! It was weird.', 'author': 'Bob', 'timestamp': '2025-02-03 22:41:37', 'category': 'entertainment', 'sentiment': 0.72, 'keyword_mentioned': 'movie', 'message_length': 35}
+2025-02-03 22:41:37.360 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just loved a movie! It was weird.', 'author': 'Bob', 'timestamp': '2025-02-03 22:41:37', 'category': 'entertainment', 'sentiment': 0.72, 'keyword_mentioned': 'movie', 'message_length': 35}
+2025-02-03 22:41:37.366 | INFO     | __main__:process_message:153 - Processed JSON message: {'message': 'I just loved a movie! It was weird.', 'author': 'Bob', 'timestamp': '2025-02-03 22:41:37', 'category': 'entertainment', 'sentiment': 0.72, 'keyword_mentioned': 'movie', 'message_length': 35}
+2025-02-03 22:41:37.367 | INFO     | __main__:process_message:161 - Message received: ('entertainment', 0.72, 'Bob')
+2025-02-03 22:41:37.369 | INFO     | __main__:process_message:167 - Updated DataFrame
+2025-02-03 22:41:37.383 | ERROR    | __main__:process_message:180 - Error processing message: Length of list vectors must match length of `data` when both are used, but `data` has length 3 and the vector passed to `x` has length 1.
+2025-02-03 22:41:40.644 | WARNING  | __main__:main:216 - Consumer interrupted by user.
+2025-02-03 22:41:40.663 | INFO     | __main__:main:221 - Kafka consumer for topic 'project_json' closed.
+2025-02-03 22:41:40.668 | INFO     | __main__:main:223 - END consumer for topic 'project_json' and group 'project_group'.
+2025-02-03 22:41:42.364 | INFO     | __main__:main:158 - {'message': 'I just saw a story! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-03 22:41:42', 'category': 'other', 'sentiment': 0.07, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-03 22:41:42.394 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just saw a story! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-03 22:41:42', 'category': 'other', 'sentiment': 0.07, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-03 22:41:44.142 | WARNING  | __main__:main:171 - Producer interrupted by user.
+2025-02-03 22:41:44.144 | INFO     | __main__:main:177 - Kafka producer closed.
+2025-02-03 22:41:44.145 | INFO     | __main__:main:178 - Producer shutting down.
