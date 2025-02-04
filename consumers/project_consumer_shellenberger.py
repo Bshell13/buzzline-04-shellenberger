@@ -35,7 +35,8 @@ from dotenv import load_dotenv
 # Use the common alias 'plt' for Matplotlib.pyplot
 # Know pyplot well
 import matplotlib.pyplot as plt
-import numpy as np
+import seaborn as sns
+import pandas as pd
 
 # Import functions from local modules
 from utils.utils_consumer import create_kafka_consumer
@@ -71,10 +72,7 @@ def get_kafka_consumer_group_id() -> str:
 #####################################
 
 # Initialize a dictionary to store the related fields
-custom_dict = {
-    'sentiment': [],
-    'message_length': []
-}
+custom_df = pd.DataFrame(columns=['Sentiment', 'Category', 'Message Length'])
 
 #####################################
 # Set up live visuals
@@ -102,13 +100,14 @@ def update_chart():
     ax.clear()
 
     # Get the authors and counts from the dictionary
-    sentiment = list(custom_dict['sentiment'].keys())
-    message_length = list(custom_dict['message_length'].keys())
+    # sentiment = list(custom_dict['sentiment'])
+    # message_length = list(custom_dict['message_length'])
+    # category = list(custom_dict['category'])
 
     # Create a bar chart using the bar() method.
     # Pass in the x list, the y list, and the color
-    ax.scatter(message_length, sentiment)
-
+    sns.scatterplot(data=custom_df, x='Message Length', y='Sentiment', hue='Category')
+    
     # Use the built-in axes methods to set the labels and title
     ax.set_xlabel("Length of Message (# of characters)")
     ax.set_ylabel("Sentiment Score")
@@ -159,14 +158,16 @@ def process_message(message: str) -> None:
             category = message_dict.get("category", "unknown")
             sentiment = message_dict.get('sentiment', 'unknown')
             message_length = message_dict.get('message_length', 'unknown')
-            logger.info(f"Message received from author: {category, sentiment, message_length}")
+            logger.info(f"Message received: {category, sentiment, message_length}")
             
             # update 'custom_dict' with extracted fields.
-            custom_dict['sentiment'].append(sentiment)
-            custom_dict['message_length'].append(message_length)
+            custom_df.loc[len(custom_df)] = [sentiment, category, message_length]
+            # custom_dict['sentiment'].append(sentiment)
+            # custom_dict['message_length'].append(message_length)
+            # custom_dict['category'].append(category)
 
             # Log the updated counts
-            logger.info(f"Updated author counts: {dict(custom_dict)}")
+            logger.info(f"Updated DataFrame")
 
             # Update the chart
             update_chart()
