@@ -72,7 +72,7 @@ def get_kafka_consumer_group_id() -> str:
 #####################################
 
 # Initialize a dictionary to store the related fields
-custom_df = pd.DataFrame(columns=['Sentiment', 'Category', 'Message Length'])
+custom_df = pd.DataFrame(columns=['Sentiment', 'Category', 'Author'])
 
 #####################################
 # Set up live visuals
@@ -99,19 +99,20 @@ def update_chart():
     # Clear the previous chart
     ax.clear()
 
-    # Get the authors and counts from the dictionary
-    # sentiment = list(custom_dict['sentiment'])
-    # message_length = list(custom_dict['message_length'])
-    # category = list(custom_dict['category'])
-
-    # Create a bar chart using the bar() method.
-    # Pass in the x list, the y list, and the color
-    sns.scatterplot(data=custom_df, x='Message Length', y='Sentiment', hue='Category')
+    # Calculates the average sentiment by category and author
+    avg_sentiment = custom_df.groupby(['Category', 'Author']).mean()
+    
+    # Rests the index
+    avg_sentiment = avg_sentiment.reset_index()
+    
+    # Create a barplot using the barplot() method from seaborn.
+    # Pass in the data, x list, the y list, and the hue.
+    sns.barplot(data=custom_df,x=['Category'], y=['Sentiment'], hue=['Author'], errorbar=None)
     
     # Use the built-in axes methods to set the labels and title
-    ax.set_xlabel("Length of Message (# of characters)")
+    ax.set_xlabel("Category")
     ax.set_ylabel("Sentiment Score")
-    ax.set_title("Real-Time Length of Message vs. Sentiment by Category")
+    ax.set_title("Real-Time Best Sentiment of Category by Author")
     plt.suptitle('Brandon Shellenberger')
 
     # Use the set_xticklabels() method to rotate the x-axis labels
@@ -119,7 +120,6 @@ def update_chart():
     # and align them to the right
     # ha stands for horizontal alignment
     
-
     # Use the tight_layout() method to automatically adjust the padding
     plt.tight_layout()
 
@@ -157,16 +157,13 @@ def process_message(message: str) -> None:
             # Extract the 'category', 'sentiment', and 'message_length' field from the Python dictionary
             category = message_dict.get("category", "unknown")
             sentiment = message_dict.get('sentiment', 'unknown')
-            message_length = message_dict.get('message_length', 'unknown')
-            logger.info(f"Message received: {category, sentiment, message_length}")
+            author = message_dict.get('author', 'unknown')
+            logger.info(f"Message received: {category, sentiment, author}")
             
-            # update 'custom_dict' with extracted fields.
-            custom_df.loc[len(custom_df)] = [sentiment, category, message_length]
-            # custom_dict['sentiment'].append(sentiment)
-            # custom_dict['message_length'].append(message_length)
-            # custom_dict['category'].append(category)
+            # update 'custom_df' with extracted fields.
+            custom_df.loc[len(custom_df)] = [sentiment, category, author]
 
-            # Log the updated counts
+            # Log showing updated dataframe
             logger.info(f"Updated DataFrame")
 
             # Update the chart
